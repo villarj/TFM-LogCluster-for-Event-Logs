@@ -2,6 +2,22 @@
 from pyspark import SparkContext, SparkConf
 from time import time
 import matplotlib.pyplot as plt
+import re
+
+
+#Función que transforma las lineas en FECHA y HORA
+def transformarTexto(x):
+  import ExpresionesRegulares
+  #Obtenemos las horas y lo sustituimos
+  horas = ExpresionesRegulares.find_time(x) 
+  for hora in horas:
+    x = x.replace(hora, '[HORA]')
+  #Obtenemos las fechas y lo sustituimos
+  fechas = ExpresionesRegulares.find_dates(x)  
+  for fecha in fechas:
+    x = x.replace(fecha, '[FECHA]')
+  #Devolvemos el valor de x
+  return x
 
 
 #Función que separa las palabras por espacios en blanco y devulve una lista con estas palabras.
@@ -127,9 +143,13 @@ def algoritmoLogCluster(soporte,path):
   if (soporte>numLineas):
     mensaje="El soporte es mayor que el número de lineas"
     return mensaje
+  
+  #Sustituimos palabras por los patrones
+  pasoSustituir=archivo.map(lambda x:transformarTexto(x)) 
+  
   #Contamos el número de palabras que hay en el archivo.
   #Primero separamos las palabras de las líneas
-  pasoTokenizar=archivo.flatMap(lambda x:tokenize(x)) 
+  pasoTokenizar=pasoSustituir.flatMap(lambda x:tokenize(x)) 
   #Añadimos un 1 a cada palabra para contar después
   pasoTokenizar=pasoTokenizar.map(lambda x:(x,1))  
   #Sumamos las palabras para ver que cantidad hay de cada una.
@@ -144,7 +164,9 @@ def algoritmoLogCluster(soporte,path):
     mensaje="No hay palabras para este soporte"
     return mensaje 
   #Leemos las líneas y las indexamos.
-  lineasIndexadas=archivo.zipWithIndex()
+  #pasoSustituir=archivo.map(lambda x:transformarTexto(x)) 
+  
+  lineasIndexadas=pasoSustituir.zipWithIndex()  
   #Vemos las palabras que han superado el umbral que hay por línea y obtenemos su
   #posición
   obtenerPalabras=lineasIndexadas.flatMap(lambda x:((encontrarPalabras(palabras,x[0]))))
@@ -152,8 +174,8 @@ def algoritmoLogCluster(soporte,path):
   lineasFiltradas=obtenerPalabras.filter(lambda x:x[1]!=())
   #Reducimos las lineas por sus keys y obtenemos los cluster.
   candidatosCluster=lineasFiltradas.reduceByKey(lambda v1,v2:buscarMinMax(v1,v2))
-  for linea in candidatosCluster.collect():
-    print (linea)
+  #for linea in candidatosCluster.collect():
+   # print (linea)
   #Filtramos los candidatos a cluster por el soporte
   clusterFinales=candidatosCluster.filter(lambda x: (x[1][(len(x[1])-1)])>=soporte)
   #Obtenemos el número de líneas que pertenecen a un cluster.
@@ -176,13 +198,21 @@ def algoritmoLogCluster(soporte,path):
       if(l2[i]==(0, 0) or l2[i]==0):
         patron=patron+l1[i]+" "
       else:
-        minimo=l2[i][0]
-        maximo=l2[i][1]
+        if (type(l2[i])==int):
+          minimo=l2[i]
+          maximo=l2[i]
+        else:
+          minimo=l2[i][0]
+          maximo=l2[i][1]
         auxiliar="*{"+str(minimo)+","+str(maximo)+"}"
         patron=patron+auxiliar+" "+l1[i]+" "
     if(l2[longitud]!=(0, 0) and l2[longitud]!=0):
-      minimo=l2[longitud][0]
-      maximo=l2[longitud][1] 
+      if(type(l2[i])==int):
+        minimo=l2[i]
+        maximo=l2[i]
+      else:
+        minimo=l2[longitud][0]
+        maximo=l2[longitud][1] 
       auxiliar="*{"+str(minimo)+","+str(maximo)+"}"
       patron=patron+auxiliar
     soporte=l2[longitud+1]
@@ -195,7 +225,7 @@ def algoritmoLogCluster(soporte,path):
   tiempoEmpleado=tiempoFinal-tiempoInicial  
   #Almacenamos la información en un diccionario.  
   diccionario={'Patrones':patrones,'SoporteLineas':soportes,'LineasClusterizadas':numeroLineasClusterizadas,
-                 'TiempoEmpleado':tiempoEmpleado,'NumLineas':numLineas, 'numCluster':numeroClusterFinales}
+                 'TiempoEmpleado':tiempoEmpleado,'NumLineas':numLineas,'numCandidatosCluster':numeroCandidatosCluster ,'numCluster':numeroClusterFinales}
   #Devolvemos el diccionario.
   return diccionario
 
@@ -203,144 +233,130 @@ def algoritmoLogCluster(soporte,path):
 
 
 
-print(algoritmoLogCluster(2,"Informacion.txt"))
+print(algoritmoLogCluster(5,"Informacion.txt"))
 
+import sys
+orig_stdout = sys.stdout
+f = open('primerosResultados.txt', 'w')
+sys.stdout = f
 zz=[]
 fig, ((ax1, ax2),(ax3,ax4)) = plt.subplots(2, 2)
-for s in [650,800]:
+for s in [10,30,50,70,100,200,300,500,800]:
   print("Calculando para el soporte:",s)
   resultado=algoritmoLogCluster(s,"syslog.txt")
+  print("Número de cluster encontrados:")
+  print(resultado['numCluster'])
+  print("Patrones y num lineas")
+  for i in range(len(resultado['Patrones'])):
+    print(resultado['Patrones'][i],"",resultado['SoporteLineas'][i])
+    #print(resultado['SoporteLineas'][i])
   zz.append(resultado)
+  print("")
   ax1.plot(s, resultado['TiempoEmpleado'], 'ro',)
-  ax2.plot(s, resultado['LineasClusterizadas'], 'go')
-  ax3.plot(s, resultado['numCluster'], 'bo')
-  ax4.plot(s, resultado['NumLineas']-resultado['LineasClusterizadas'], 'yo')
+  ax2.plot(s, resultado['LineasClusterizadas'], 'go')  
+  ax3.plot(s, resultado['numCandidatosCluster'], 'yo')
+  ax4.plot(s, resultado['numCluster'], 'bo')
+
+
+#sys.stdout = orig_stdout
+#f.close()
 
 ax1.set_ylabel('t/s')
 #ax1.set_xlabel('Soporte')
 ax1.set_title('Tiempo')
 
 ax2.set_ylabel('Lineas Clusterizadas')
-ax2.set_xlabel('Soporte')
+#ax2.set_xlabel('Soporte')
 ax2.set_title('Lineas')
 
-ax3.set_ylabel('num Cluster')
+ax3.set_ylabel('num candidatos Cluster')
 ax3.set_xlabel('Soporte')
-ax3.set_title('Cluster')
+ax3.set_title('Cluster candidatos')
 
-ax4.set_title('Outliers')
+ax4.set_title('num Cluster seleccionados')
 
 
 plt.show()  
 
-#Cargamos el archivo de log
-#archivo=sc.textFile("Informacion.txt")
-#umbral=2
-
-#tiempoInicial=time()
-#print("Número de líneas:")
-#numLineas=archivo.count()
-#print(archivo.count())
-
-#Contamos el número de palabras que hay en el archivo.
-#Primero separamos las palabras de las líneas
-#pasoTokenizar=archivo.flatMap(lambda x:tokenize(x)) 
-#Añadimos un 1 a cada palabra para contar después
-#pasoTokenizar=pasoTokenizar.map(lambda x:(x,1))
-#Sumamos las palabras para ver que cantidad hay de cada una.
-#sumaPalabras=pasoTokenizar.reduceByKey(lambda x,y: x + y)
-#Una vez tenemos las palabras, filtramos por el umbral.
-#palabrasUmbral=sumaPalabras.filter(lambda (x,y): y >= umbral)
-#print(palabrasUmbral.collect())
-#Cogemos solo las palabras.
-#palabras=palabrasUmbral.map(lambda x: x[0])
-
-#Almacenamos las palabras en una variable.
-#palabras=palabras.collect()
-#if(palabras==[]):
-#  print('Holaaa')
-#print("Palabras que superan el umbral: ",palabras)
-#Leemos las líneas y las tokenizamos.
-#lineasTokenizadas=archivo.zipWithIndex()
-#print("Paso2")
-#print(lineasTokenizadas.collect())
-#print("Paso 3")
-#lll=lineasTokenizadas.flatMap(lambda x:((encontrarPalabras(palabras,x[0]))))
-#print(lll.collect())
-#Borra las lineas que no encuentra la palabra
-#lll=lll.filter(lambda x:x[1]!=())
-#----------------------------------------------
-#-------------------------------------------
-#aa=lll.groupByKey()
-#print(aa.collect())
- 
-
-
-#bb=lll.reduceByKey(lambda v1,v2:buscarMinMax(v1,v2))
-#print("Pintando bb")
-#print(bb.collect())
-
-#cc=bb.filter(lambda x: (x[1][(len(x[1])-1)])>=umbral)
-
-#print("Pintando finallll")
-#print(cc.collect())
-
-#patrones=[]
-#soportes=[]
-#print("El error esta aqui")
-#for linea in cc.collect():
- # patron=""
- # l1=linea[0]
- # l2=linea[1]
- # longitud=len(l1)
-  #for i in range(longitud):
-   # if(l2[i]==(0, 0) or l2[i]==0):
-    #  patron=patron+l1[i]+" "
-    #else:
-     # minimo=l2[i][0]
-      #maximo=l2[i][1]
-      #auxiliar="*{"+str(minimo)+","+str(maximo)+"}"
-      #patron=patron+auxiliar+" "+l1[i]+" "
-
-  #if(l2[longitud]!=(0, 0) and l2[longitud]!=0):
-   # minimo=l2[longitud][0]
-    #maximo=l2[longitud][1] 
-    #auxiliar="*{"+str(minimo)+","+str(maximo)+"}"
-    #patron=patron+auxiliar
-  #soporte=l2[longitud+1]
-  #patrones.append(patron)
-  #soportes.append(soporte)
-  #print("Pintando patron y soporte:")
-  #print(patron)
-  #print(soporte)
-
-#tiempoFinal=time()
-#tiempoEmpleado=tiempoFinal-tiempoInicial
-#print(tiempoEmpleado)
-
-#numeroLineasClusterizadas=cc.map(lambda x:(x[1][(len(x[1])-1)])).sum()
-
-
-#diccionario={'Patrones':patrones,'SoporteLineas':soportes,'LineasClusterizadas':numeroLineasClusterizadas,
-#             'TiempoEmpleado':tiempoEmpleado,'NumLineas':numLineas}
-#bb=lll.reduceByKey(lambda v1,v2:buscarMinimo(v1,v2))
-#bb=lll.reduceByKey(lambda x:x1+x2)
-#print(bb.collect())
-#Pasar el filtro del umbral
-#--------------------------------------------------------
-#--------------------------------------------------------
-
-#lineas2=lineasTokenizadas.map(lambda x: x[0])
-
-#print(lineas2.collect())
 
 
 
 
 
-import matplotlib.pyplot as plt
-#plt.plot([1,2,3,4])
-#plt.ylabel('some numbers')
-#plt.show()
 
-print("FIN")
+import ExpresionesRegulares
+#matches = ExpresionesRegulares.find_dates(line2)
+
+
+
+#for mat in matches:
+  #print(type(str(mat)))
+  #mat=str(mat)
+ # line2 = line2.replace(mat, '[FECHA]')
+  #print (mat)
+
+
+#print(line2)
+
+
+
+#https://code.tutsplus.com/es/tutorials/8-regular-expressions-you-should-know--net-6149
+
+
+
+archivo1=sc.textFile("syslog.txt")
+
+paso1=archivo1.map(lambda x:transformarTexto(x)) 
+
+#expresion='\[FECHA\] \[HORA\] RUE3 kernel: \[(\s+)(\S+)(\s*)(\S*)(\s*)?(\S*)?(\s*)?(\S*)?(\s*)?(\S*)?(\s*)?(\S*)?(\s*)?(\S*)?(\s*)?(\S*)?(\s*)?(\S*)?(\s*)?(\S*)?(\s*)?(\S*)?(\s*)?(\S*)?(\s*)?(\S*)?(\s*)?(\S*)?(\s*)?(\S*)?(\s*)?(\S*)?(\s*)?(\S*)?(\s*)?(\S*)?(\s*)?(\S*)?(\s*)?(\S*)?(\s*)?(\S*)?(\s*)?(\S*)?(\s*)?(\S*)?'
+
+expresion='\[FECHA\] \[HORA\] RUE3 kernel: \[    0\.000000\](\s+\S+)?(\s+\S+)?(\s+\S+)?(\s+\S+)?\s+\[mem(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?'
+
+
+
+expresion='\[FECHA\] \[HORA\] RUE3 kernel: \[(\s+\S+)\s+pci(\s+\S+\s+\S+\s+\S+\s+\S+)(\s+\S+)?(\s+\S+)?(\s+\S+)?'
+
+patron = re.compile(expresion)
+
+
+
+import rePatronesCluster
+buscar=rePatronesCluster.findLineasCluster()
+
+
+
+print("")
+print("")
+print("Parseando las lineas con los cluster de soporte =100")
+print("")
+for i in range(5):
+  print(zz[4]['Patrones'][i])
+  t=0
+  j=0  
+  for resul in paso1.collect():
+    b=buscar.buscarLineasPatrones(resul,i)
+    if (b!=None):
+      t=t+1
+      if(b==resul):
+        j=j+1
+  #a=patron.finditer(resul)
+  #for r in a:
+    #print("Linea:")
+    #print(resul)
+    #print(i)
+    #print(r.group(0))
+    #t=t+1
+    #if(resul==r.group(0)):
+      #j=j+1
+      #print("coincidencia")
+
+  print("Pintando lineas que tienen este patrón")
+  print (t)
+
+  print("Pintando lineas que coinciden exactamente con este patrón")
+  print (j)
+
+
+sys.stdout = orig_stdout
+f.close()
+print("Fin Expresiones regulares")
