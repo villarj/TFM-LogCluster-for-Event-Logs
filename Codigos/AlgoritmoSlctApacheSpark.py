@@ -1,14 +1,29 @@
-
-#Importamos todos los modulos que vamos a utilizar
+#Algoritmo SLCT
 from pyspark import SparkContext, SparkConf
 from time import time
 import re
 import sys
-import ExpresionesRegulares
 
-#Funcion que separa las palabras por espacios en blanco y devulve una lista con estas palabras y la
-#posicion que ocupan en la linea.
-def obtenerPalabrasAndPosicion(x):
+
+## --- Metodos para todos los algoritmos --- ## 
+#Funcion que transforma las lineas en FECHA y HORA
+def transformarTexto(x):
+    import ExpresionesRegulares
+    #Obtenemos las horas y lo sustituimos
+    horas = ExpresionesRegulares.find_time(x) 
+    for hora in horas:
+        x = x.replace(hora, '[HORA]')
+    #Obtenemos las fechas y lo sustituimos
+    fechas = ExpresionesRegulares.find_dates(x)  
+    for fecha in fechas:
+        x = x.replace(fecha, '[FECHA]')
+    #Devolvemos el valor de x
+    return x
+
+### -------------------------------------- ###
+### --- Metodos para el algoritmo SLCT --- ###
+#Funcion que separa las palabras por espacios en blanco y devulve una lista con estas palabras.
+def tokenize(x):
     resultado = []
     #Posicion de la palabra en la linea
     posicion=1
@@ -22,19 +37,22 @@ def obtenerPalabrasAndPosicion(x):
     #Devolvemos el resultado.
     return resultado
 
-def encontrarPalabras(palabras,linea):
+
+#Funcion que busca una palabra en cada linea.
+def encontrarPalabras(palabra,linea):
     #Definimos dos arrays para almacenar las palabras que se repiten
     resultado=[]
     #Para cada palabra que hay en la linea comprobamos si 
     #dicha palabra se encuentra entre las palabras frecuentes.
     for p in linea:
         #Vemos si la p esta en palabras
-        if p in palabras:
+        if p in palabra:
             #Anadimos la palabra que esta en la linea a la lista
             resultado.append(p)
     #Transformamos la lista a una tupla.
     resultado=tuple(resultado)
     return resultado
+
 
 ### -------------------------------------------- ###
 ### -------------- Algoritmo SLCT -------------- ###
@@ -48,41 +66,40 @@ def algoritmoSLCT(soporte, path,sc,prepocesar=False):
     #Contamos las lineas del archivo
     numLineas=archivo.count()
     #Modificamos el soporte
-    print(tiempoInicial)
-    #soporte=(soporte/100.0)*numLineas
+    soporte=(soporte/100.0)*numLineas
+    #Transformar el texto si se quiere........................
     if (prepocesar==True):
         archivo=archivo.map(lambda x:transformarTexto(x))
-    #Primer paso del algoritmo contar las palabras segun la posicion en la que esten.
+    ####archivo=archivo.map(lambda x:transformarTexto(x))######
+    #Tokenizamos los resultados para contar las palabras.
     #Por esta razon usamos la funcion flatMap para que todas las palabras esten afectadas.
-    pasoObtenerPalabrasAndPosicion=archivo.flatMap(lambda x:obtenerPalabrasAndPosicion(x)) 
-    #Añadimos un 1 a cada palabra para contar
-    pasoContar=pasoObtenerPalabrasAndPosicion.map(lambda x:(x,1))
+    pasoTokenizar=archivo.flatMap(lambda x:tokenize(x))    
+    #Anadimos un 1 a cada palabra para contar despues
+    pasoContar=pasoTokenizar.map(lambda x:(x,1))  
     #Una vez tenemos las palabras y la posicion que ocupan en cada linea
     #Procedemos a contar dichas palabras, para esto hacemos uso de la funcion reduceByKey
     #Sumamos por clave valor
     sumaPalabras=pasoContar.reduceByKey(lambda x,y: x+y)
     #A continuacion filtramos las palabras por el soporte deseado
-    filtradoPalabras=sumaPalabras.filter(lambda (x,y): y>=soporte)
+    filtradoPalabras=sumaPalabras.filter(lambda (x,y): y>soporte)
     #Una vez estan las palabras filtradas por el soporte almacenamos dichas palabras y su posicion
     almacenarPalabras=filtradoPalabras.map(lambda x: x[0])
     #Recogemos las palabras y su posicion
     palabras=almacenarPalabras.collect()
-    print(palabras)
-    #print(pasoContar.count())
-    #print(pairs.collect())
-    #print(pairs.count())
-
-    #Ahora buscamos los posibles cluster, para esto para cada linea obtenemos las palabras
-    #y posicion que ocupan en dicha linea
-    lineaTokenizadaAndPosicionPalabra=archivo.map(lambda x:obtenerPalabrasAndPosicion(x))
+    if(palabras==[]):
+        palabras=["Sin_palabras"]
+    
+    ### ------------------------------------------------------- ###
+    ### Obtener los cluster ###
+    #Ahora vamos a empezar a buscar los cluster, primero tokenizamos por linea    
+    lineaTokenizada=archivo.map(lambda x:tokenize(x))
+    
     #Buscamos las palabras frecuentes y su pocision en cada linea y lo almacenamos    
-    obtenerPalabrasFrecuentes=lineaTokenizadaAndPosicionPalabra.map(lambda x:((encontrarPalabras(palabras,x))))
+    obtenerPalabras=lineaTokenizada.map(lambda x:((encontrarPalabras(palabras,x))))
+    
     #Anadimos un 1 en cada linea para obtener el soporte posteriormente.    
-    obtenerPalabras=obtenerPalabrasFrecuentes.map(lambda x: (x,1))
-    #Agrupamos por su clave y asi tenemos el soporte
-    agrupacion=obtenerPalabras.groupByKey().mapValues(len)  
-    print(obtenerPalabrasFrecuentes.collect())
-    print(agrupacion.collect())
+    obtenerPalabras=obtenerPalabras.map(lambda x: (x,1))
+    
     #Agrupamos por su clave y asi tenemos el soporte
     agrupacion=obtenerPalabras.groupByKey().mapValues(len)  
     #Obtenemos el numero de posibles candidatos a cluster.
@@ -128,21 +145,3 @@ def algoritmoSLCT(soporte, path,sc,prepocesar=False):
     diccionario={'Patrones':patrones,'SoporteLineas':soporteLineas,'TiempoEmpleado':tiempoEmpleado,'NumCandidatosCluster':numCandidatosCluster,'NumFinalesCluster':numFinalesCluster,'LineasClusterizadas':porcentajeLineasClusterizadas}
     #Devolvemos el resultado    
     return(diccionario)
-
-
-
-
-bb='C:\Users\javie\Desktop\Informacion.txt'
-
-try:
-    sc
-except NameError:
-    conf = SparkConf().setAppName("SLCT").setMaster("local[3]")
-    #conf = SparkConf().setAppName("SLCT").setMaster("spark://vzzspark01.corp.zzircon.com:7077")
-    sc = SparkContext(conf=conf)  
-
-aa=algoritmoSLCT(3,bb,sc)
-
-print(aa)
-
-print("FIN")
