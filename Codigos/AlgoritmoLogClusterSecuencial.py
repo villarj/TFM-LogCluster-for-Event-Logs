@@ -43,10 +43,6 @@ def logClusterSecuencial(nombrearchivo,soporte,preprocesar=False):
     for palabra in contador:
         if (contador[palabra]>=soporte):
             palabrasFrecuentes.append(palabra)
-            #print(palabra)
-            #print(contador[palabra])
-
-    #print(palabrasFrecuentes)
 
     clusterCandidatos=[]
 
@@ -130,7 +126,7 @@ def logClusterSecuencial(nombrearchivo,soporte,preprocesar=False):
     
     
     for i in range(len(clusterCandidatos)):
-        if (clusterCandidatos[i]['soporte']>soporte):
+        if (clusterCandidatos[i]['soporte']>=soporte):
             patrones.append(clusterCandidatos[i]['patron'])
             soporteLineas.append(clusterCandidatos[i]['soporte'])
             lineasClusterizadas=lineasClusterizadas+clusterCandidatos[i]['soporte']
