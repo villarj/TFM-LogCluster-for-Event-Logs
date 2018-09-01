@@ -81,7 +81,7 @@ def algoritmoSLCT(soporte, path,sc,prepocesar=False):
     #Sumamos por clave valor
     sumaPalabras=pasoContar.reduceByKey(lambda x,y: x+y)
     #A continuacion filtramos las palabras por el soporte deseado
-    filtradoPalabras=sumaPalabras.filter(lambda (x,y): y>soporte)
+    filtradoPalabras=sumaPalabras.filter(lambda (x,y): y>=soporte)
     #Una vez estan las palabras filtradas por el soporte almacenamos dichas palabras y su posicion
     almacenarPalabras=filtradoPalabras.map(lambda x: x[0])
     #Recogemos las palabras y su posicion
