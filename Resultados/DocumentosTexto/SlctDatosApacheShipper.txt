@@ -1,0 +1,109 @@
+{'SoporteLineas': [4597, 4592, 4045, 4592, 4599, 4592, 4590, 4045, 4045, 4045, 4590, 4592], 'TiempoEmpleado': 57.53945302963257, 'NumFinalesCluster': 12, 'Patrones': [u'[FECHA] [HORA] [Information] Client connected * Waiting for data. ', u'[FECHA] [HORA] [Debug] myCompleteMessage: ', u'[FECHA] [HORA] [Debug] Sending (current) ', u'[FECHA] [HORA] [Debug] Number of bytes read: ', u'[FECHA] [HORA] [Information] Waiting for client... ', u'[FECHA] [HORA] [Debug] step 3 ', u'[FECHA] [HORA] [Debug] step 2 ', u'[FECHA] [HORA] [Debug] Pending messages en queue (late=False): 1 ', u'[FECHA] [HORA] [Debug] Sent: ', u'[FECHA] [HORA] [Debug] Enqueue * in current queue. ', u'[FECHA] [HORA] [Debug] Enqued: ', u'[FECHA] [HORA] [Debug] myData: '], 'LineasClusterizadas': 96.02, 'NumCandidatosCluster': 19}
+Simple logfile clustering tool (slct_apache_spark), Soporte: 5 %, numCandidatosCluster: 19, numClusterFinales: 12
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Information] Client connected * Waiting for data. ', 4597)
+(u'[FECHA] [HORA] [Debug] myCompleteMessage: ', 4592)
+(u'[FECHA] [HORA] [Debug] Sending (current) ', 4045)
+(u'[FECHA] [HORA] [Debug] Number of bytes read: ', 4592)
+(u'[FECHA] [HORA] [Information] Waiting for client... ', 4599)
+(u'[FECHA] [HORA] [Debug] step 3 ', 4592)
+(u'[FECHA] [HORA] [Debug] step 2 ', 4590)
+(u'[FECHA] [HORA] [Debug] Pending messages en queue (late=False): 1 ', 4045)
+(u'[FECHA] [HORA] [Debug] Sent: ', 4045)
+(u'[FECHA] [HORA] [Debug] Enqueue * in current queue. ', 4045)
+(u'[FECHA] [HORA] [Debug] Enqued: ', 4590)
+(u'[FECHA] [HORA] [Debug] myData: ', 4592)
+
+
+
+{'SoporteLineas': [9198, 9182, 36726], 'TiempoEmpleado': 55.017212867736816, 'NumFinalesCluster': 3, 'Patrones': [u'[FECHA] [HORA] [Information] ', u'[FECHA] [HORA] [Debug] step ', u'[FECHA] [HORA] [Debug] '], 'LineasClusterizadas': 99.98, 'NumCandidatosCluster': 5}
+Simple logfile clustering tool (slct_apache_spark), Soporte: 10 %, numCandidatosCluster: 5, numClusterFinales: 3
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Information] ', 9198)
+(u'[FECHA] [HORA] [Debug] step ', 9182)
+(u'[FECHA] [HORA] [Debug] ', 36726)
+
+
+
+{'SoporteLineas': [9198, 9182, 36726], 'TiempoEmpleado': 55.63998222351074, 'NumFinalesCluster': 3, 'Patrones': [u'[FECHA] [HORA] [Information] ', u'[FECHA] [HORA] [Debug] step ', u'[FECHA] [HORA] [Debug] '], 'LineasClusterizadas': 99.98, 'NumCandidatosCluster': 5}
+Simple logfile clustering tool (slct_apache_spark), Soporte: 15 %, numCandidatosCluster: 5, numClusterFinales: 3
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Information] ', 9198)
+(u'[FECHA] [HORA] [Debug] step ', 9182)
+(u'[FECHA] [HORA] [Debug] ', 36726)
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 55.80530405044556, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] '], 'LineasClusterizadas': 83.29, 'NumCandidatosCluster': 3}
+Simple logfile clustering tool (slct_apache_spark), Soporte: 20 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] ', 45908)
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 59.21233606338501, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] '], 'LineasClusterizadas': 83.29, 'NumCandidatosCluster': 3}
+Simple logfile clustering tool (slct_apache_spark), Soporte: 25 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] ', 45908)
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 57.721863985061646, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] '], 'LineasClusterizadas': 83.29, 'NumCandidatosCluster': 3}
+Simple logfile clustering tool (slct_apache_spark), Soporte: 30 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] ', 45908)
+
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 66.55584812164307, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] '], 'LineasClusterizadas': 83.29, 'NumCandidatosCluster': 3}
+Simple logfile clustering tool (slct_apache_spark), Soporte: 35 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] ', 45908)
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 55.84951901435852, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] '], 'LineasClusterizadas': 83.29, 'NumCandidatosCluster': 3}
+Simple logfile clustering tool (slct_apache_spark), Soporte: 40 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] ', 45908)
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 61.85479998588562, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] '], 'LineasClusterizadas': 83.29, 'NumCandidatosCluster': 3}
+Simple logfile clustering tool (slct_apache_spark), Soporte: 45 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] ', 45908)
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 69.00738501548767, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] '], 'LineasClusterizadas': 83.29, 'NumCandidatosCluster': 3}
+Simple logfile clustering tool (slct_apache_spark), Soporte: 50 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] ', 45908)
+
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 74.05055594444275, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] '], 'LineasClusterizadas': 83.29, 'NumCandidatosCluster': 3}
+Simple logfile clustering tool (slct_apache_spark), Soporte: 55 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] ', 45908)
+
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 76.91295599937439, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] '], 'LineasClusterizadas': 83.29, 'NumCandidatosCluster': 3}
+Simple logfile clustering tool (slct_apache_spark), Soporte: 60 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] ', 45908)
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 78.77136421203613, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] '], 'LineasClusterizadas': 83.29, 'NumCandidatosCluster': 3}
+Simple logfile clustering tool (slct_apache_spark), Soporte: 65 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] ', 45908)
+
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 71.38097906112671, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] '], 'LineasClusterizadas': 83.29, 'NumCandidatosCluster': 3}
+Simple logfile clustering tool (slct_apache_spark), Soporte: 70 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] ', 45908)
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 70.92831802368164, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] '], 'LineasClusterizadas': 83.29, 'NumCandidatosCluster': 3}
+Simple logfile clustering tool (slct_apache_spark), Soporte: 80 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] ', 45908)

@@ -1,0 +1,213 @@
+Nombre del fichero: syslog.txt, numero de lineas totales: 2633
+
+Simple logfile clustering tool (slct_apache_spark), Soporte: 5 %, numCandidatosCluster: 13, numClusterFinales: 3
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 kernel: [ 0.000000] ', 268)
+(u'[FECHA] [HORA] RUE3 ', 456)
+(u'[FECHA] [HORA] RUE3 kernel: [ ', 1184)
+
+Log cluster apache spark, Soporte: 5 %, numCandidatosCluster: 29, numClusterFinales: 4
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1067)
+(u'[FECHA] [HORA] RUE3 kernel: [ 0.000000] *{0,4} [mem *{1,5}', 154)
+(u'[FECHA] [HORA] RUE3 *{1,16}', 397)
+(u'[FECHA] [HORA] RUE3 kernel: [ 0.000000] *{2,16}', 160)
+
+Log cluster secuencial, Soporte: 5 %, numCandidatosCluster: 29, numClusterFinales: 4
+Cluster y numero de lineas en el cluster:
+('[FECHA] [HORA] RUE3 *{1,16}', 397)
+('[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1067)
+('[FECHA] [HORA] RUE3 kernel: [ 0.000000] *{2,16}', 160)
+('[FECHA] [HORA] RUE3 kernel: [ 0.000000] *{0,4} [mem *{1,5}', 154)
+
+Simple logfile clustering tool (slct_apache_spark), Soporte: 10 %, numCandidatosCluster: 4, numClusterFinales: 3
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 ', 714)
+(u'[FECHA] [HORA] RUE3 kernel: [ 0.000000] ', 384)
+(u'[FECHA] [HORA] RUE3 kernel: [ ', 1504)
+
+Log cluster apache spark, Soporte: 10 %, numCandidatosCluster: 13, numClusterFinales: 2
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 *{1,21}', 704)
+(u'[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1306)
+
+Log cluster secuencial, Soporte: 10 %, numCandidatosCluster: 13, numClusterFinales: 2
+Cluster y numero de lineas en el cluster:
+('[FECHA] [HORA] RUE3 *{1,21}', 704)
+('[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1306)
+
+Simple logfile clustering tool (slct_apache_spark), Soporte: 15 %, numCandidatosCluster: 3, numClusterFinales: 2
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 ', 714)
+(u'[FECHA] [HORA] RUE3 kernel: [ ', 1888)
+
+Log cluster apache spark, Soporte: 15 %, numCandidatosCluster: 9, numClusterFinales: 2
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 *{1,21}', 704)
+(u'[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Log cluster secuencial, Soporte: 15 %, numCandidatosCluster: 9, numClusterFinales: 2
+Cluster y numero de lineas en el cluster:
+('[FECHA] [HORA] RUE3 *{1,21}', 704)
+('[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Simple logfile clustering tool (slct_apache_spark), Soporte: 20 %, numCandidatosCluster: 3, numClusterFinales: 2
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 ', 714)
+(u'[FECHA] [HORA] RUE3 kernel: [ ', 1888)
+
+Log cluster apache spark, Soporte: 20 %, numCandidatosCluster: 9, numClusterFinales: 2
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 *{1,21}', 704)
+(u'[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Log cluster secuencial, Soporte: 20 %, numCandidatosCluster: 9, numClusterFinales: 2
+Cluster y numero de lineas en el cluster:
+('[FECHA] [HORA] RUE3 *{1,21}', 704)
+('[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Simple logfile clustering tool (slct_apache_spark), Soporte: 25 %, numCandidatosCluster: 3, numClusterFinales: 2
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 ', 714)
+(u'[FECHA] [HORA] RUE3 kernel: [ ', 1888)
+
+Log cluster apache spark, Soporte: 25 %, numCandidatosCluster: 9, numClusterFinales: 2
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 *{1,21}', 704)
+(u'[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Log cluster secuencial, Soporte: 25 %, numCandidatosCluster: 9, numClusterFinales: 2
+Cluster y numero de lineas en el cluster:
+('[FECHA] [HORA] RUE3 *{1,21}', 704)
+('[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Simple logfile clustering tool (slct_apache_spark), Soporte: 30 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 kernel: [ ', 1888)
+
+Log cluster apache spark, Soporte: 30 %, numCandidatosCluster: 9, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Log cluster secuencial, Soporte: 30 %, numCandidatosCluster: 9, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+('[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Simple logfile clustering tool (slct_apache_spark), Soporte: 35 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 kernel: [ ', 1888)
+
+Log cluster apache spark, Soporte: 35 %, numCandidatosCluster: 9, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Log cluster secuencial, Soporte: 35 %, numCandidatosCluster: 9, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+('[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Simple logfile clustering tool (slct_apache_spark), Soporte: 40 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 kernel: [ ', 1888)
+
+Log cluster apache spark, Soporte: 40 %, numCandidatosCluster: 9, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Log cluster secuencial, Soporte: 40 %, numCandidatosCluster: 9, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+('[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Simple logfile clustering tool (slct_apache_spark), Soporte: 45 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 kernel: [ ', 1888)
+
+Log cluster apache spark, Soporte: 45 %, numCandidatosCluster: 9, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Log cluster secuencial, Soporte: 45 %, numCandidatosCluster: 9, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+('[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Simple logfile clustering tool (slct_apache_spark), Soporte: 50 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 kernel: [ ', 1888)
+
+Log cluster apache spark, Soporte: 50 %, numCandidatosCluster: 9, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Log cluster secuencial, Soporte: 50 %, numCandidatosCluster: 9, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+('[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Simple logfile clustering tool (slct_apache_spark), Soporte: 55 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 kernel: [ ', 1888)
+
+Log cluster apache spark, Soporte: 55 %, numCandidatosCluster: 9, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Log cluster secuencial, Soporte: 55 %, numCandidatosCluster: 9, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+('[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Simple logfile clustering tool (slct_apache_spark), Soporte: 60 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 kernel: [ ', 1888)
+
+Log cluster apache spark, Soporte: 60 %, numCandidatosCluster: 9, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Log cluster secuencial, Soporte: 60 %, numCandidatosCluster: 9, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+('[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Simple logfile clustering tool (slct_apache_spark), Soporte: 65 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 kernel: [ ', 1888)
+
+Log cluster apache spark, Soporte: 65 %, numCandidatosCluster: 9, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Log cluster secuencial, Soporte: 65 %, numCandidatosCluster: 9, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+('[FECHA] [HORA] RUE3 kernel: [ *{2,23}', 1810)
+
+Simple logfile clustering tool (slct_apache_spark), Soporte: 70 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 kernel: [ ', 1888)
+
+Log cluster apache spark, Soporte: 70 %, numCandidatosCluster: 9, numClusterFinales: 0
+Cluster y numero de lineas en el cluster:
+
+Log cluster secuencial, Soporte: 70 %, numCandidatosCluster: 9, numClusterFinales: 0
+Cluster y numero de lineas en el cluster:
+
+Simple logfile clustering tool (slct_apache_spark), Soporte: 75 %, numCandidatosCluster: 1, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 ', 2633)
+
+Log cluster apache spark, Soporte: 75 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 *{1,25}', 2619)
+
+Log cluster secuencial, Soporte: 75 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+('[FECHA] [HORA] RUE3 *{1,25}', 2619)
+
+Simple logfile clustering tool (slct_apache_spark), Soporte: 80 %, numCandidatosCluster: 1, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 ', 2633)
+
+Log cluster apache spark, Soporte: 80 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] RUE3 *{1,25}', 2619)
+
+Log cluster secuencial, Soporte: 80 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+('[FECHA] [HORA] RUE3 *{1,25}', 2619)
+

@@ -1,0 +1,121 @@
+{'SoporteLineas': [4045, 4592, 4590, 4045, 4592, 4045, 4590, 4597, 4592, 4599, 4592, 4045], 'TiempoEmpleado': 55.87722897529602, 'NumFinalesCluster': 12, 'Patrones': [u'[FECHA] [HORA] [Debug] Enqueue *{1,1} in current queue. ', u'[FECHA] [HORA] [Debug] Number of bytes read: *{1,1}', u'[FECHA] [HORA] [Debug] step 2 ', u'[FECHA] [HORA] [Debug] Pending messages en queue (late=False): 1 ', u'[FECHA] [HORA] [Debug] myCompleteMessage: *{1,1}', u'[FECHA] [HORA] [Debug] Sent: *{1,1}', u'[FECHA] [HORA] [Debug] Enqued: *{1,1}', u'[FECHA] [HORA] [Information] Client connected *{1,1} Waiting for data. ', u'[FECHA] [HORA] [Debug] myData: *{1,1}', u'[FECHA] [HORA] [Information] Waiting for client... ', u'[FECHA] [HORA] [Debug] step 3 ', u'[FECHA] [HORA] [Debug] Sending (current) *{1,1}'], 'LineasClusterizadas': 96.02, 'NumLineas': 55116, 'NumCandidatosCluster': 19}
+Log cluster apache spark, Soporte: 5 %, numCandidatosCluster: 19, numClusterFinales: 12
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] Enqueue *{1,1} in current queue. ', 4045)
+(u'[FECHA] [HORA] [Debug] Number of bytes read: *{1,1}', 4592)
+(u'[FECHA] [HORA] [Debug] step 2 ', 4590)
+(u'[FECHA] [HORA] [Debug] Pending messages en queue (late=False): 1 ', 4045)
+(u'[FECHA] [HORA] [Debug] myCompleteMessage: *{1,1}', 4592)
+(u'[FECHA] [HORA] [Debug] Sent: *{1,1}', 4045)
+(u'[FECHA] [HORA] [Debug] Enqued: *{1,1}', 4590)
+(u'[FECHA] [HORA] [Information] Client connected *{1,1} Waiting for data. ', 4597)
+(u'[FECHA] [HORA] [Debug] myData: *{1,1}', 4592)
+(u'[FECHA] [HORA] [Information] Waiting for client... ', 4599)
+(u'[FECHA] [HORA] [Debug] step 3 ', 4592)
+(u'[FECHA] [HORA] [Debug] Sending (current) *{1,1}', 4045)
+
+
+
+{'SoporteLineas': [9196, 9182, 36726], 'TiempoEmpleado': 54.483582973480225, 'NumFinalesCluster': 3, 'Patrones': [u'[FECHA] [HORA] [Information] *{0,3} Waiting for *{1,1}', u'[FECHA] [HORA] [Debug] step *{1,1}', u'[FECHA] [HORA] [Debug] *{2,6}'], 'LineasClusterizadas': 99.98, 'NumLineas': 55116, 'NumCandidatosCluster': 6}
+Log cluster apache spark, Soporte: 10 %, numCandidatosCluster: 6, numClusterFinales: 3
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Information] *{0,3} Waiting for *{1,1}', 9196)
+(u'[FECHA] [HORA] [Debug] step *{1,1}', 9182)
+(u'[FECHA] [HORA] [Debug] *{2,6}', 36726)
+
+
+
+{'SoporteLineas': [9196, 9182, 36726], 'TiempoEmpleado': 54.52776002883911, 'NumFinalesCluster': 3, 'Patrones': [u'[FECHA] [HORA] [Information] *{0,3} Waiting for *{1,1}', u'[FECHA] [HORA] [Debug] step *{1,1}', u'[FECHA] [HORA] [Debug] *{2,6}'], 'LineasClusterizadas': 99.98, 'NumLineas': 55116, 'NumCandidatosCluster': 6}
+Log cluster apache spark, Soporte: 15 %, numCandidatosCluster: 6, numClusterFinales: 3
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Information] *{0,3} Waiting for *{1,1}', 9196)
+(u'[FECHA] [HORA] [Debug] step *{1,1}', 9182)
+(u'[FECHA] [HORA] [Debug] *{2,6}', 36726)
+
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 55.87880301475525, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] *{2,6}'], 'LineasClusterizadas': 83.29, 'NumLineas': 55116, 'NumCandidatosCluster': 3}
+Log cluster apache spark, Soporte: 20 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] *{2,6}', 45908)
+
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 55.04473304748535, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] *{2,6}'], 'LineasClusterizadas': 83.29, 'NumLineas': 55116, 'NumCandidatosCluster': 3}
+Log cluster apache spark, Soporte: 25 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] *{2,6}', 45908)
+
+
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 54.07350492477417, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] *{2,6}'], 'LineasClusterizadas': 83.29, 'NumLineas': 55116, 'NumCandidatosCluster': 3}
+Log cluster apache spark, Soporte: 30 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] *{2,6}', 45908)
+
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 55.07514405250549, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] *{2,6}'], 'LineasClusterizadas': 83.29, 'NumLineas': 55116, 'NumCandidatosCluster': 3}
+Log cluster apache spark, Soporte: 35 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] *{2,6}', 45908)
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 54.726754903793335, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] *{2,6}'], 'LineasClusterizadas': 83.29, 'NumLineas': 55116, 'NumCandidatosCluster': 3}
+Log cluster apache spark, Soporte: 40 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] *{2,6}', 45908)
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 56.11395001411438, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] *{2,6}'], 'LineasClusterizadas': 83.29, 'NumLineas': 55116, 'NumCandidatosCluster': 3}
+Log cluster apache spark, Soporte: 45 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] *{2,6}', 45908)
+
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 56.39851212501526, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] *{2,6}'], 'LineasClusterizadas': 83.29, 'NumLineas': 55116, 'NumCandidatosCluster': 3}
+Log cluster apache spark, Soporte: 50 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] *{2,6}', 45908)
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 55.71221590042114, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] *{2,6}'], 'LineasClusterizadas': 83.29, 'NumLineas': 55116, 'NumCandidatosCluster': 3}
+Log cluster apache spark, Soporte: 55 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] *{2,6}', 45908)
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 63.13469386100769, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] *{2,6}'], 'LineasClusterizadas': 83.29, 'NumLineas': 55116, 'NumCandidatosCluster': 3}
+Log cluster apache spark, Soporte: 60 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] *{2,6}', 45908)
+
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 65.98771619796753, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] *{2,6}'], 'LineasClusterizadas': 83.29, 'NumLineas': 55116, 'NumCandidatosCluster': 3}
+Log cluster apache spark, Soporte: 65 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] *{2,6}', 45908)
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 57.50181984901428, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] *{2,6}'], 'LineasClusterizadas': 83.29, 'NumLineas': 55116, 'NumCandidatosCluster': 3}
+Log cluster apache spark, Soporte: 70 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] *{2,6}', 45908)
+
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 64.67869091033936, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] *{2,6}'], 'LineasClusterizadas': 83.29, 'NumLineas': 55116, 'NumCandidatosCluster': 3}
+Log cluster apache spark, Soporte: 75 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] *{2,6}', 45908)
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 65.7811188697815, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] *{2,6}'], 'LineasClusterizadas': 83.29, 'NumLineas': 55116, 'NumCandidatosCluster': 3}
+Log cluster apache spark, Soporte: 80 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] *{2,6}', 45908)
+
+

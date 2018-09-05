@@ -1,0 +1,185 @@
+ALGORITMO LOG CLUSTER
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 5%
+Patron:
+[FECHA] [HORA] [Debug] Enqueue *{1,1} in current queue. 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*Enqueue(\s*\S*)\s*in\s*current\s*queue\.
+Patron:
+[FECHA] [HORA] [Debug] Number of bytes read: *{1,1}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*Number\s*of\s*bytes\s*read:(\s*\S*)
+Patron:
+[FECHA] [HORA] [Debug] step 2 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*step\s*2
+Patron:
+[FECHA] [HORA] [Debug] Pending messages en queue (late=False): 1 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*Pending\s*messages\s*en\s*queue\s*\(late=False\):\s*1
+Patron:
+[FECHA] [HORA] [Debug] myCompleteMessage: *{1,1}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*myCompleteMessage:(\s*\S*)
+Patron:
+[FECHA] [HORA] [Debug] Sent: *{1,1}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*Sent:(\s*\S*)
+Patron:
+[FECHA] [HORA] [Debug] Enqued: *{1,1}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*Enqued:(\s*\S*)
+Patron:
+[FECHA] [HORA] [Information] Client connected *{1,1} Waiting for data. 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Information\]\s*Client\s*connected(\s*\S*)\s*Waiting\s*for\s*data\.
+Patron:
+[FECHA] [HORA] [Debug] myData: *{1,1}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*myData:(\s*\S*)
+Patron:
+[FECHA] [HORA] [Information] Waiting for client... 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Information\]\s*Waiting\s*for\s*client\.\.\.
+Patron:
+[FECHA] [HORA] [Debug] step 3 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*step\s*3
+Patron:
+[FECHA] [HORA] [Debug] Sending (current) *{1,1}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*Sending\s*\(current\)(\s*\S*)
+
+
+
+
+ALGORITMO LOG CLUSTER
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 10%
+Patron:
+[FECHA] [HORA] [Information] *{0,3} Waiting for *{1,1}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Information\](\s*\S*)?(\s*\S*)?(\s*\S*)?\s*Waiting\s*for(\s*\S*)
+Patron:
+[FECHA] [HORA] [Debug] step *{1,1}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*step(\s*\S*)
+Patron:
+[FECHA] [HORA] [Debug] *{2,6}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\](\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+
+
+ALGORITMO LOG CLUSTER
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 15%
+Patron:
+[FECHA] [HORA] [Information] *{0,3} Waiting for *{1,1}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Information\](\s*\S*)?(\s*\S*)?(\s*\S*)?\s*Waiting\s*for(\s*\S*)
+Patron:
+[FECHA] [HORA] [Debug] step *{1,1}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*step(\s*\S*)
+Patron:
+[FECHA] [HORA] [Debug] *{2,6}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\](\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+
+
+
+ALGORITMO LOG CLUSTER
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 20%
+Patron:
+[FECHA] [HORA] [Debug] *{2,6}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\](\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+
+ALGORITMO LOG CLUSTER
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 25%
+Patron:
+[FECHA] [HORA] [Debug] *{2,6}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\](\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+
+ALGORITMO LOG CLUSTER
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 35%
+Patron:
+[FECHA] [HORA] [Debug] *{2,6}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\](\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+
+
+ALGORITMO LOG CLUSTER
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 40%
+Patron:
+[FECHA] [HORA] [Debug] *{2,6}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\](\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+
+ALGORITMO LOG CLUSTER
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 45%
+Patron:
+[FECHA] [HORA] [Debug] *{2,6}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\](\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+
+ALGORITMO LOG CLUSTER
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 50%
+Patron:
+[FECHA] [HORA] [Debug] *{2,6}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\](\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+
+ALGORITMO LOG CLUSTER
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 55%
+Patron:
+[FECHA] [HORA] [Debug] *{2,6}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\](\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+
+ALGORITMO LOG CLUSTER
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 60%
+Patron:
+[FECHA] [HORA] [Debug] *{2,6}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\](\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+ALGORITMO LOG CLUSTER
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 65%
+Patron:
+[FECHA] [HORA] [Debug] *{2,6}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\](\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+
+ALGORITMO LOG CLUSTER
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 70%
+Patron:
+[FECHA] [HORA] [Debug] *{2,6}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\](\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+
+
+ALGORITMO LOG CLUSTER
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 75%
+Patron:
+[FECHA] [HORA] [Debug] *{2,6}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\](\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+
+ALGORITMO LOG CLUSTER
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 80%
+Patron:
+[FECHA] [HORA] [Debug] *{2,6}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\](\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+

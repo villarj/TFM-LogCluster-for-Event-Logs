@@ -1,0 +1,246 @@
+ALGORITMO LOG CLUSTER
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 5%
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ *{2,23}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[(\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ 0.000000] *{0,4} [mem *{1,5}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[\s*0\.000000\](\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?\s*\[mem(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+Patron:
+[FECHA] [HORA] RUE3 *{1,16}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ 0.000000] *{2,16}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[\s*0\.000000\](\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 10%
+Patron:
+[FECHA] [HORA] RUE3 *{1,21}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ *{2,23}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[(\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 15%
+Patron:
+[FECHA] [HORA] RUE3 *{1,21}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ *{2,23}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[(\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 20%
+Patron:
+[FECHA] [HORA] RUE3 *{1,21}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ *{2,23}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[(\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 25%
+Patron:
+[FECHA] [HORA] RUE3 *{1,21}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ *{2,23}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[(\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 30%
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ *{2,23}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[(\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 35%
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ *{2,23}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[(\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 40%
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ *{2,23}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[(\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 45%
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ *{2,23}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[(\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 50%
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ *{2,23}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[(\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 55%
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ *{2,23}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[(\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 60%
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ *{2,23}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[(\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 65%
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ *{2,23}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[(\s*\S*)(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 70%
+
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 75%
+Patron:
+[FECHA] [HORA] RUE3 *{1,25}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+Modelos para los patrones obtenidos con el algoritmo LogCluster y con soporte 80%
+Patron:
+[FECHA] [HORA] RUE3 *{1,25}
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3(\s*\S*)(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?(\s*\S*)?
+
+ALGORITMO SLCT
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 5%
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ 0.000000] 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[\s*0\.000000\]
+Patron:
+[FECHA] [HORA] RUE3 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[
+
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 10%
+Patron:
+[FECHA] [HORA] RUE3 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ 0.000000] 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[\s*0\.000000\]
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[
+
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 15%
+Patron:
+[FECHA] [HORA] RUE3 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[
+
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 20%
+Patron:
+[FECHA] [HORA] RUE3 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[
+
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 25%
+Patron:
+[FECHA] [HORA] RUE3 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[
+
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 30%
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[
+
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 35%
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[
+
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 40%
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[
+
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 45%
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[
+
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 50%
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[
+
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 55%
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[
+
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 60%
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[
+
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 65%
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[
+
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 70%
+Patron:
+[FECHA] [HORA] RUE3 kernel: [ 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3\s*kernel:\s*\[
+
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 75%
+Patron:
+[FECHA] [HORA] RUE3 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3
+
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 80%
+Patron:
+[FECHA] [HORA] RUE3 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*RUE3
+

@@ -1,0 +1,202 @@
+ALGORITMO SLCT
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 5%
+Patron:
+[FECHA] [HORA] [Information] Client connected * Waiting for data. 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Information\]\s*Client\s*connected\s*\*\s*Waiting\s*for\s*data\.
+Patron:
+[FECHA] [HORA] [Debug] myCompleteMessage: 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*myCompleteMessage:
+Patron:
+[FECHA] [HORA] [Debug] Sending (current) 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*Sending\s*\(current\)
+Patron:
+[FECHA] [HORA] [Debug] Number of bytes read: 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*Number\s*of\s*bytes\s*read:
+Patron:
+[FECHA] [HORA] [Information] Waiting for client... 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Information\]\s*Waiting\s*for\s*client\.\.\.
+Patron:
+[FECHA] [HORA] [Debug] step 3 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*step\s*3
+Patron:
+[FECHA] [HORA] [Debug] step 2 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*step\s*2
+Patron:
+[FECHA] [HORA] [Debug] Pending messages en queue (late=False): 1 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*Pending\s*messages\s*en\s*queue\s*\(late=False\):\s*1
+Patron:
+[FECHA] [HORA] [Debug] Sent: 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*Sent:
+Patron:
+[FECHA] [HORA] [Debug] Enqueue * in current queue. 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*Enqueue\s*\*\s*in\s*current\s*queue\.
+Patron:
+[FECHA] [HORA] [Debug] Enqued: 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*Enqued:
+Patron:
+[FECHA] [HORA] [Debug] myData: 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*myData:
+
+
+
+ALGORITMO SLCT
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 10%
+Patron:
+[FECHA] [HORA] [Information] 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Information\]
+Patron:
+[FECHA] [HORA] [Debug] step 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*step
+Patron:
+[FECHA] [HORA] [Debug] 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]
+
+
+
+ALGORITMO SLCT
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 15%
+Patron:
+[FECHA] [HORA] [Information] 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Information\]
+Patron:
+[FECHA] [HORA] [Debug] step 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]\s*step
+Patron:
+[FECHA] [HORA] [Debug] 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]
+
+
+
+ALGORITMO SLCT
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 20%
+Patron:
+[FECHA] [HORA] [Debug] 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]
+
+
+ALGORITMO SLCT
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 25%
+Patron:
+[FECHA] [HORA] [Debug] 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]
+
+
+ALGORITMO SLCT
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 30%
+Patron:
+[FECHA] [HORA] [Debug] 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]
+
+
+
+ALGORITMO SLCT
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 35%
+Patron:
+[FECHA] [HORA] [Debug] 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]
+
+
+
+ALGORITMO SLCT
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 40%
+Patron:
+[FECHA] [HORA] [Debug] 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]
+
+
+
+ALGORITMO SLCT
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 45%
+Patron:
+[FECHA] [HORA] [Debug] 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]
+
+
+ALGORITMO SLCT
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 50%
+Patron:
+[FECHA] [HORA] [Debug] 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]
+
+
+ALGORITMO SLCT
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 55%
+Patron:
+[FECHA] [HORA] [Debug] 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]
+
+
+ALGORITMO SLCT
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 60%
+Patron:
+[FECHA] [HORA] [Debug] 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]
+
+
+ALGORITMO SLCT
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 65%
+Patron:
+[FECHA] [HORA] [Debug] 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]
+
+
+ALGORITMO SLCT
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 70%
+Patron:
+[FECHA] [HORA] [Debug] 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]
+
+
+{'SoporteLineas': [45908], 'TiempoEmpleado': 77.89150285720825, 'NumFinalesCluster': 1, 'Patrones': [u'[FECHA] [HORA] [Debug] '], 'LineasClusterizadas': 83.29, 'NumCandidatosCluster': 3}
+Simple logfile clustering tool (slct_apache_spark), Soporte: 75 %, numCandidatosCluster: 3, numClusterFinales: 1
+Cluster y numero de lineas en el cluster:
+(u'[FECHA] [HORA] [Debug] ', 45908)
+
+
+ALGORITMO SLCT
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 75%
+Patron:
+[FECHA] [HORA] [Debug] 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]
+
+
+ALGORITMO SLCT
+Modelos para los patrones obtenidos con el algoritmo Slct y con soporte 80%
+Patron:
+[FECHA] [HORA] [Debug] 
+Modelo:
+^\s*\[FECHA\]\s*\[HORA\]\s*\[Debug\]
+
+
+
+
